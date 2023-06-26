@@ -1,0 +1,86 @@
+<html>
+  <form>
+    <div style="text-align-last: right; padding-right: 45%">
+      <h1>Update Blogs</h1>
+      <input
+        style="text-align-last: start"
+        type="hidden"
+        name="blog_id"
+        id="blog_id"
+        value="{{ data.blog_id }}"
+        #blog_id
+      /><br />
+      <label><b>Blog Name</b></label
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="name"
+        id="name"
+        #name
+        value="{{ data.title }}"
+      /><br />
+      <label><b>Description</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="description"
+        id="description"
+        value="{{ data.description }}"
+        #description
+      /><br />
+      <label><b>Author</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="author"
+        id="author"
+        value="{{ data.author }}"
+        #author
+      /><br />
+      <label><b>Published Date</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="published_date"
+        id="published_date"
+        value="{{ data.published_date }}"
+        #published_date
+      /><br />
+      <label><b>Status</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="status"
+        id="status"
+        value="{{ data.status }}"
+        #status
+      /><br /><br />
+      <button
+        type="submit"
+        style="margin-right: 6%"
+        (click)="
+          Update(
+            blog_id.value,
+            title.value,
+            description.value,
+            published_date.value,
+            author.value,
+            status.value
+          )
+        "
+      >
+        Update
+      </button>
+      <button type="button" style="margin-right: 15px">
+        <a routerLink="/home" style="text-decoration: none; color: black"
+          >Back</a
+        >
+      </button>
+    </div>
+  </form>
+</html>

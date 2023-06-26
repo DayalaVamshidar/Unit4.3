@@ -1,0 +1,70 @@
+<html>
+  <div style="text-align-last: right; padding-right: 45%">
+    <h1>Add Blogs Here</h1>
+
+    <label><b>Blog Name</b></label
+    >&nbsp;&nbsp;&nbsp;&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="title"
+      id="title"
+      #title
+    /><br />
+    <label><b>Description</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="description"
+      id="description"
+      #description
+    /><br />
+    <label><b>published_date</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="published_date"
+      id="published_date"
+      #published_date
+    /><br />
+    <label><b>Author name</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="author"
+      id="author"
+      #author
+    /><br />
+
+    <label><b>status</b></label
+    >&nbsp;
+    <input
+      style="text-align-last: start"
+      type="text"
+      name="status"
+      id="status"
+      #status
+    /><br /><br />
+    <button
+      type="button"
+      style="margin-right: 6%"
+      (click)="
+        Add(
+          title.value,
+          description.value,
+          published_date.value,
+          author.value,
+          status.value
+        )
+      "
+    >
+      Add
+    </button>
+    <button type="button" style="margin-right: 15px">
+      <a routerLink="/home" style="text-decoration: none; color: black">Back</a>
+    </button>
+  </div>
+</html>
